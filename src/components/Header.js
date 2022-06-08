@@ -1,11 +1,10 @@
-import React from 'react'
 import Button from './Button'
 
 const Header = () => {
   const onClick = (e) => {
     console.log(e)
   }
-  
+
   return (
     <header className='header'>
       <h1>Task Tracker</h1>
