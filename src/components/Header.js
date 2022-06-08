@@ -1,14 +1,14 @@
 import Button from './Button'
 
-const Header = () => {
-  const onClick = (e) => {
-    console.log(e)
-  }
-
+const Header = ({ onAddClick, isFormVisible }) => {
   return (
     <header className='header'>
       <h1>Task Tracker</h1>
-      <Button title='Add' onClick={onClick} />
+      <Button
+        title={isFormVisible ? 'Close' : 'Add'}
+        onClick={onAddClick}
+        color={isFormVisible ? 'red' : ''}
+      />
     </header>
   )
 }
